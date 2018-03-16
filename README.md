@@ -53,10 +53,21 @@ We are not required to build a UI for this application. Instead, focus is on tho
   - EXPECTED OUTPUT: None.
 
 * Create a method to recalculate a date into seconds
-  - EXPECTED INPUT: Date
-  - EXPECTED OUTPUT: seconds
-  - return date in seconds
-  
+  - EXPECTED INPUT: 11/16/1966
+  - EXPECTED OUTPUT: 1617231600
+  - return a date in seconds
+
+* Create a method to calculate a person's age in years from their birthday
+  - EXPECTED INPUT: 11/16/1966
+  - EXPECTED OUTPUT: 52
+  - return it in years
+
+* Create a method to take two dates and determine the difference, in seconds, between the two.
+  - EXPECTED INPUT: 11/16/1966
+  - EXPECTED INPUT: 11/16/1965
+  - EXPECTED RETURN: 45536400
+
+
     * test to see if it receives the age
     * test to see if it calculates an expected result
 
@@ -189,7 +200,7 @@ I began by thoroughly thinking out what the project was actually asking me to do
 
 ## Known Bugs and Issues
 
-None at this time.
+There are no known bugs. The code needs a strong refactoring pass, for sure. Also, leap years were roughed out so it's not super accurate in milliseconds or even seconds.
 
 ## Support and contact details
 
