@@ -3,11 +3,11 @@
 #### By Andy Grossberg
 
 ## Description
-An application to determine a user's age based on a planet's solar years.
+An application to determine a user's age based on a planet's solar years as well as their life expectancy and how many years they've lived past their life expectancy if they have. It takes a birthdate and a gender as input.
 
 ## Rules
 
-The code review project for week one of Javascript focused on testing:
+This is the code review project for week one of Javascript focused on testing:
 
 **Super Galactic Age Calculator**
 A solar year lasts 365 days on planet Earth. However, the length of a solar year varies from planet to planet. For instance, a solar year on Mercury lasts 88 days. Write an application that determines a user’s age based on a planet’s solar years. You will need to use the Javascript Date object.
@@ -25,7 +25,7 @@ We are not required to build a UI for this application. Instead, focus is on tho
 * Determine how many years a user has left to live on each planet… (yikes!) To do this, the application will have to calculate the user’s life expectancy. You can determine average life expectancy as you see fit. A simple way to do this would be to have the user input the average life expectancy for their demographic. A more involved way to do this would be to collect other information from the user (e.g. lifestyle, country of residence, activity level, etc.) to determine their life expectancy.
 * If a user has already surpassed the average life expectancy, return the number of years they have lived past the life expectancy.
 
-###Objectives
+### Objectives
 
 - Code will be reviewed for the following objectives:
 
@@ -61,7 +61,10 @@ We are not required to build a UI for this application. Instead, focus is on tho
     * let date = new Date();
   - return the difference in seconds
 
-* Refactor the previous three methods into one method?
+* Refactor the previous three methods into one method???
+
+* Create a method to Validate the date submitted by the user by making sure that it isn't past the current date.
+  - if it is past the current date, reject the entry and set everything to 0
 
 * Create a method to calculate a provided age (in seconds) for various planets
   - Mercury (A Mercury year is .24 Earth years.)
@@ -85,7 +88,11 @@ We are not required to build a UI for this application. Instead, focus is on tho
 * In Main.js use the above methods to process the user input
 
 * Add UI
-  - Make a form to enter birthdate, gender, and choose planet
+  - Make a form to enter birthdate, gender, and choose planet.
+    * require all answers
+    * take the date in date form
+    * the gender is a radio button
+    * the planet is a select menu
   - Make a Div for results of the conversion:
     * Age
     * Planetary Age
@@ -98,7 +105,7 @@ We are not required to build a UI for this application. Instead, focus is on tho
 
 ## Methodology
 
-* I began by thoroughly thinking out what the project was actually asking me to do. I then spec'd it out with the smallest possible chunks I could to make testing super granular. *****
+I began by thoroughly thinking out what the project was actually asking me to do. I then spec'd it out with the smallest possible chunks I could to make testing super granular. The application acquires the user's birthdate, gender, and a planet of their choice. Then it calculates their age in their chosen planet's days, their life expectancy here on Earth (using the "Period Life Table, 2014" from the US Social Security Administration), and how many years they have lived past the their life expectancy--if they have done so. NOTE: I plan to disallow dates that are past the current date the application is run.
 
 ## Technologies Used
 
@@ -114,7 +121,7 @@ We are not required to build a UI for this application. Instead, focus is on tho
 * Jasmine (for tests)
 * Karma (for test running)
 * ESLint (for linting my code, looking for dropped semi-colons and whatnot)
-* Babel (to transpile my code to ESS 5 so I can use ES6 sugary goodness like classes and let's)
+* Babel (to transpile my code to ES5 so I can use ES6 sugary goodness like classes and let's)
 
 **Dev Dependencies**
 * Webpack 4.0.1
@@ -171,9 +178,13 @@ We are not required to build a UI for this application. Instead, focus is on tho
 * build the file with npm: $ npm load build
 * Load the index.html file from dist/ in your browser
 
+## Known Bugs and Issues
+
+None at this time.
+
 ## Support and contact details
 
-* Contact the author at andy.grossberg@gmail.com
+**Contact the author at andy.grossberg@gmail.com**
 
 ### License
 
