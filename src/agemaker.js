@@ -57,5 +57,27 @@ export class AgeMaker {
     console.log("Milliseconds since input birthday: " + (myNewDate - birthday));
     return (myNewDate - birthday) / 1000;
   }
+
+  calculatePlanetaryAge(planet, personsAgeInYears){
+    if (planet.toUpperCase() == "MERCURY"){
+      // * Return the age of a human in Mercury years. (A Mercury year is .24 Earth years.)
+      return personsAgeInYears * .24;
+    } else if ((planet.toUpperCase() == "VENUS")) {
+      // * Return the age of a human in Venus years. (A Venus year is .62 Earth years.)
+      return personsAgeInYears * .62;
+    } else if (planet.toUpperCase() == "MARS") {
+      // * Return the age of a human in Mars years. (A Mars year is 1.88 Earth years.)
+      return personsAgeInYears * 1.88;
+    } else if (planet.toUpperCase() == "JUPITER") {
+      // * Return the age of a human in Jupiter years. (A Jupiter year is 11.86 Earth years.)
+      return personsAgeInYears * 11.86;
+    } else{
+      return 0;
+    }
+
+  }
+
+
+
 }
 exports.AgeMakerModule = AgeMaker;

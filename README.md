@@ -66,10 +66,27 @@ We are not required to build a UI for this application. Instead, focus is on tho
   - EXPECTED INPUT: 11/16/1966
   - EXPECTED INPUT: 11/16/1965
   - EXPECTED RETURN: 45536400
+  - (test with same dates to get 0 first)
+
+* Create a method to convert a provided Earth age (in years) into what it would be on various planets
+  - Mercury (A Mercury year is .24 Earth years.)
+  - Venus (A Venus year is .62 Earth years.)
+  - Mars (A Mars year is 1.88 Earth years.)
+  - Jupiter (A Jupiter year is 11.86 Earth years.)
+  - Return a String with the Planet and the input age in that planet's Years
+    * test to see if it calculates an expected result for each planet using an Earth age of 100 for each planet
+      - EXPECTED INPUT: mercury, 100
+      - EXPECTED RETURN: 24
+      - EXPECTED INPUT: venus, 100
+      - EXPECTED RETURN: 62
+      - EXPECTED INPUT: mars, 100
+      - EXPECTED RETURN: 188
+      - EXPECTED INPUT: jupiter, 100
+      - EXPECTED RETURN: 1186
+
+* YEARS LEFT TO LIVE
 
 
-    * test to see if it receives the age
-    * test to see if it calculates an expected result
 
 * Create a method to convert a given birthdate into seconds
   - return age in seconds
@@ -80,8 +97,6 @@ We are not required to build a UI for this application. Instead, focus is on tho
   - Instantiate a date object
     * let date = new Date();
   - return the difference in seconds
-
-* Refactor the previous three methods into one method???
 
 * Create a method to Validate the date submitted by the user by making sure that it isn't past the current date.
   - if it is past the current date, reject the entry and set everything to 0
