@@ -25,7 +25,7 @@ We are not required to build a UI for this application. Instead, focus is on tho
 * Determine how many years a user has left to live on each planet… (yikes!) To do this, the application will have to calculate the user’s life expectancy. You can determine average life expectancy as you see fit. A simple way to do this would be to have the user input the average life expectancy for their demographic. A more involved way to do this would be to collect other information from the user (e.g. lifestyle, country of residence, activity level, etc.) to determine their life expectancy.
 * If a user has already surpassed the average life expectancy, return the number of years they have lived past the life expectancy.
 
-### Objectives
+**Objectives**
 
 - Code will be reviewed for the following objectives:
 
@@ -41,13 +41,22 @@ We are not required to build a UI for this application. Instead, focus is on tho
 
 ## Specifications
 
-* Create an Age object
-  - Constructor should take Birthdate and Gender
-    * test if object exists
-    * test if the properties took the values assigned at construction
+* Create an age modifier object called AgeMaker
+  - Constructor should take birthdate, gender, and planet
 
-* Create a method to recalculate an age into seconds
-  - return age in seconds
+* Test if object exists
+  - EXPECTED INPUT: "11/16/1966","female", "mercury"
+  - EXPECTED OUTPUT: None.
+
+* Test if assigning a value to a property changes the value assigned at construction
+  - EXPECTED INPUT: "male"
+  - EXPECTED OUTPUT: None.
+
+* Create a method to recalculate a date into seconds
+  - EXPECTED INPUT: Date
+  - EXPECTED OUTPUT: seconds
+  - return date in seconds
+  
     * test to see if it receives the age
     * test to see if it calculates an expected result
 
@@ -121,7 +130,7 @@ I began by thoroughly thinking out what the project was actually asking me to do
 * Jasmine (for tests)
 * Karma (for test running)
 * ESLint (for linting my code, looking for dropped semi-colons and whatnot)
-* Babel (to transpile my code to ES5 so I can use ES6 sugary goodness like classes and let's)
+* Babel (to transpile my code)
 
 **Dev Dependencies**
 * Webpack 4.0.1
@@ -140,7 +149,7 @@ I began by thoroughly thinking out what the project was actually asking me to do
 * install and initialize (init -y) Node (if it isn't already)
 * npm install webpack@4.0.1 -- save-dev
 * npm install webpack-cli@2.0.9 -- save-dev
-* remove the test script from package.json
+  - remove the test script from package.json that has the error message
 * make sure that webpack.config.js is in the top level of the project
 * npm install style-loader@0.20.2 css-loader@0.28.10 --save-dev
 * npm install html-webpack-plugin@3.0.6 --save-dev
@@ -149,10 +158,10 @@ I began by thoroughly thinking out what the project was actually asking me to do
 * npm install uglifyjs-webpack-plugin@1.2.2 --save-dev
   - (smash that code!)
 * npm install webpack-dev-server@3.1.0 --save-dev
-* NOTE: You will be using Run Start from here on -------------------------------------------------
+* NOTE: You will be using Run Start from here on -------------------------------------------------?
 * npm install eslint@4.18.2 --save-dev
 * npm install eslint-loader@2.0.0 --save-dev
-* npm run lint
+* npm run lint         
   - (our linter is now set up)
 * npm install jquery --save
   - NOTE: remove jquery from any script tags in the HTML since it's going to be bundled in
@@ -160,7 +169,7 @@ I began by thoroughly thinking out what the project was actually asking me to do
 * npm install bootstrap --save
 * npm install jasmine-core@2.99.0 --save-dev
 * npm install jasmine@3.1.0 -- save-dev
-* npm ./node-modules/.bin/jasmine init
+* ./node-modules/.bin/jasmine init -------------------------------------------------------------?
 * npm install karma@2.0.0 --save-dev
 * npm install karma-jasmine@1.1.1 --save-dev
 * npm install karma-chrome-launcher@2.2.0 --save-dev
@@ -171,11 +180,11 @@ I began by thoroughly thinking out what the project was actually asking me to do
 * npm install karma-jasmine-html-reporter@0.2.2 --save-dev
 * IN THE PROJECT'S ROOT FOLDER:
   - karma init
-* Modify the karma init file
+* Modify the karma init file ----------------------------------------------------------------?
 * npm install babel-core@6.26.0 --save-dev
 * npm install babel-loader@7.1.3 --save-dev
-* npm babel-preset-es2015@6.24.1 --save-dev
-* build the file with npm: $ npm load build
+* npm install babel-preset-es2015@6.24.1 --save-dev
+* build the file with npm: $ npm load build ---------------------------------------- WHERE IS THIS SCRIPT???
 * Load the index.html file from dist/ in your browser
 
 ## Known Bugs and Issues
