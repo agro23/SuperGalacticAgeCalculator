@@ -29,7 +29,6 @@ describe('AgeMaker', function() {
 
     // console.log("diff = " + (diff / (365 * 24 * 60 * 60 * 1000)).toFixed(1));
     expect(diff / 1000).toEqual(45536400);
-
   });
 
   // * Create a method to convert a provided Earth age (in years) into what it would be on various planets
@@ -54,7 +53,12 @@ describe('AgeMaker', function() {
 
   });
 
-
+  it("should calculate the years left a person has to live", function() {
+    let anAge = new AgeMaker("11/16/1966","female", "mercury");
+    let years = anAge.calculateLifeExpectancyInYears(52, 82);
+    expect(years).toEqual(30);
+  });
+  
   // it("should turn a person's age given in years into seconds", function() {
   //   let anAge = new AgeMaker("11/16/1966","female", "mercury");
   //

@@ -77,7 +77,10 @@ export class AgeMaker {
 
   }
 
-
+  calculateLifeExpectancyInYears(AgeInYears, ExpectedYearsForDemographic){
+    let yearsLeft = ExpectedYearsForDemographic - AgeInYears;
+    return yearsLeft;
+  }
 
 }
 exports.AgeMakerModule = AgeMaker;

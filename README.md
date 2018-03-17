@@ -84,45 +84,11 @@ We are not required to build a UI for this application. Instead, focus is on tho
       - EXPECTED INPUT: jupiter, 100
       - EXPECTED RETURN: 1186
 
-* YEARS LEFT TO LIVE
+* Create a method to calculate a life expectancy based on a given age in years and the given expectancy of the users demo
+  - EXPECTED INPUT: 52, 82
+  - EXPECTED OUTPUT: 30
 
-
-
-* Create a method to convert a given birthdate into seconds
-  - return age in seconds
-    * test to see if it receives the age
-    * test to see if it calculates an expected result
-
-* Create a method to acquire a date, convert it into seconds, and compare the difference between that date and the current date in seconds.
-  - Instantiate a date object
-    * let date = new Date();
-  - return the difference in seconds
-
-* Create a method to Validate the date submitted by the user by making sure that it isn't past the current date.
-  - if it is past the current date, reject the entry and set everything to 0
-
-* Create a method to calculate a provided age (in seconds) for various planets
-  - Mercury (A Mercury year is .24 Earth years.)
-  - Venus (A Venus year is .62 Earth years.)
-  - Earth (1:1)
-  - Mars (A Mars year is 1.88 Earth years.)
-  - Jupiter (A Jupiter year is 11.86 Earth years.)
-  - Return a String with the Planet and the input age in that planet's Years
-
-* Create a method to calculate a life expectancy given a birthdate and gender  
-  - Convert the age to years
-  - Using the most recent US Social Security Period Life Table (2014), find the user's age and gender
-  - Return that life expectancy
-
-* Create a method to calculate if a person born on a given date has exceeded their life expectancy.
-  - call the life
-  - return how many years past their normal expectancy they have lived.
-
-* In Main.js create a prompt to acquire user answers to the date and gender questions
-
-* In Main.js use the above methods to process the user input
-
-* Add UI
+* Add a UI as index.html <--
   - Make a form to enter birthdate, gender, and choose planet.
     * require all answers
     * take the date in date form
@@ -134,13 +100,14 @@ We are not required to build a UI for this application. Instead, focus is on tho
     * Life expectancy
     * Time alive past expectancy
 
-* In main.js
+* Handle the user input in main.js
 
 * Refactor code as needed.
 
 ## Methodology
 
-I began by thoroughly thinking out what the project was actually asking me to do. I then spec'd it out with the smallest possible chunks I could to make testing super granular. The application acquires the user's birthdate, gender, and a planet of their choice. Then it calculates their age in their chosen planet's days, their life expectancy here on Earth (using the "Period Life Table, 2014" from the US Social Security Administration), and how many years they have lived past the their life expectancy--if they have done so. NOTE: I plan to disallow dates that are past the current date the application is run.
+I began by thoroughly thinking out what the project was actually asking me to do. I then spec'd it out with the smallest possible chunks I could to make testing super granular. I expected to create an application that acquires the user's birthdate, gender, and a planet of their choice. Then it would calculate their age in their chosen planet's days, their life expectancy here on Earth (using the "Period Life Table, 2014" from the US Social Security Administration), and how many years they have lived past the their life expectancy--if they have done so. I planned to disallow dates that are past the current date the application is run.
+HOWEVER, it took forever to get my testing setup to work out right, so I only have the functions that I would have used to make the app.
 
 ## Technologies Used
 
@@ -215,7 +182,7 @@ I began by thoroughly thinking out what the project was actually asking me to do
 
 ## Known Bugs and Issues
 
-There are no known bugs. The code needs a strong refactoring pass, for sure. Also, leap years were roughed out so it's not super accurate in milliseconds or even seconds.
+There are no known bugs. This application still needs a front end. The code also needs a strong refactoring pass, for sure. And of course, leap years were roughed out so it's not super accurate in milliseconds or even seconds.
 
 ## Support and contact details
 
