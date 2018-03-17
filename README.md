@@ -86,7 +86,9 @@ We are not required to build a UI for this application. Instead, focus is on tho
 
 * Create a method to calculate a life expectancy based on a given age in years and the given expectancy of the users demo
   - EXPECTED INPUT: 52, 82
-  - EXPECTED OUTPUT: 30
+  - EXPECTED OUTPUT: You have 30 years ahead of you!
+  - EXPECTED INPUT: 86, 82
+  - EXPECTED OUTPUT: You have lived 6 years beyond your expiration date!
 
 * Add a UI as index.html <--
   - Make a form to enter birthdate, gender, and choose planet.

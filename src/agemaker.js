@@ -50,11 +50,7 @@ export class AgeMaker {
     let day = dateAsString.slice(3,5); // all days will come in last at two digits
     let birthday = new Date();
     birthday.setFullYear(Number(year), Number(month), Number(day));
-    console.log("year = " + year);
-    console.log("month = " + month);
-    console.log("day = " + day);
     var myNewDate = new Date();
-    console.log("Milliseconds since input birthday: " + (myNewDate - birthday));
     return (myNewDate - birthday) / 1000;
   }
 
@@ -74,12 +70,14 @@ export class AgeMaker {
     } else{
       return 0;
     }
-
   }
 
   calculateLifeExpectancyInYears(AgeInYears, ExpectedYearsForDemographic){
     let yearsLeft = ExpectedYearsForDemographic - AgeInYears;
-    return yearsLeft;
+    if (yearsLeft < 0 ) {
+      return "You have lived " + Math.abs(ExpectedYearsForDemographic - AgeInYears) + " years beyond your expiration date!";
+    }
+    return "You have " + yearsLeft + " years ahead of you!";
   }
 
 }
