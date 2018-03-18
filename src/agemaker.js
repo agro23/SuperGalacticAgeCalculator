@@ -27,7 +27,7 @@ export class AgeMaker {
     let aDate = new Date();
     let anotherDate = new Date();
     // date will come in from form as 1234-12-12
-    // for now it's 11/16/1966
+    // for now it's mm/dd/yyyy
     let year1 = dateOne.slice(6,10); // all years will be four digits
     let month1 = dateOne.slice(0,2); // all months come next at two digits
     let day1 = dateOne.slice(3,5); // all days will come in last at two digits
@@ -57,16 +57,16 @@ export class AgeMaker {
   calculatePlanetaryAge(planet, personsAgeInYears){
     if (planet.toUpperCase() == "MERCURY"){
       // * Return the age of a human in Mercury years. (A Mercury year is .24 Earth years.)
-      return personsAgeInYears * .24;
+      return personsAgeInYears / .24;
     } else if ((planet.toUpperCase() == "VENUS")) {
       // * Return the age of a human in Venus years. (A Venus year is .62 Earth years.)
-      return personsAgeInYears * .62;
+      return personsAgeInYears / .62;
     } else if (planet.toUpperCase() == "MARS") {
       // * Return the age of a human in Mars years. (A Mars year is 1.88 Earth years.)
-      return personsAgeInYears * 1.88;
+      return personsAgeInYears / 1.88;
     } else if (planet.toUpperCase() == "JUPITER") {
       // * Return the age of a human in Jupiter years. (A Jupiter year is 11.86 Earth years.)
-      return personsAgeInYears * 11.86;
+      return personsAgeInYears / 11.86;
     } else{
       return 0;
     }

@@ -141,46 +141,15 @@ HOWEVER, it took forever to get my testing setup to work out right, so I only ha
 
 ## Setup/Installation Requirements
 * Download the project from the repository https://github.com/agro23/SuperGalacticAgeCalculator
-* install and initialize (init -y) Node (if it isn't already)
-* npm install webpack@4.0.1 -- save-dev
-* npm install webpack-cli@2.0.9 -- save-dev
-  - remove the test script from package.json that has the error message
-* make sure that webpack.config.js is in the top level of the project
-* npm install style-loader@0.20.2 css-loader@0.28.10 --save-dev
-* npm install html-webpack-plugin@3.0.6 --save-dev
-  - pull the script tag out of the index.html since it will be bundled in now
-* npm install clean-webpack-plugin@0.1.18 --save-dev
-* npm install uglifyjs-webpack-plugin@1.2.2 --save-dev
-  - (smash that code!)
-* npm install webpack-dev-server@3.1.0 --save-dev
-* NOTE: You will be using Run Start from here on -------------------------------------------------?
-* npm install eslint@4.18.2 --save-dev
-* npm install eslint-loader@2.0.0 --save-dev
-* npm run lint         
-  - (our linter is now set up)
-* npm install jquery --save
-  - NOTE: remove jquery from any script tags in the HTML since it's going to be bundled in
-* npm install popper.js --save
-* npm install bootstrap --save
-* npm install jasmine-core@2.99.0 --save-dev
-* npm install jasmine@3.1.0 -- save-dev
-* ./node-modules/.bin/jasmine init -------------------------------------------------------------?
-* npm install karma@2.0.0 --save-dev
-* npm install karma-jasmine@1.1.1 --save-dev
-* npm install karma-chrome-launcher@2.2.0 --save-dev
-* npm install -g karma-cli
-* npm install karma-cli@1.0.1 --save-dev
-* npm install karma-webpack@2.0.13 --save-dev
-* npm install karma-jquery@0.2.2 --save-dev
-* npm install karma-jasmine-html-reporter@0.2.2 --save-dev
-* IN THE PROJECT'S ROOT FOLDER:
-  - karma init
-* Modify the karma init file ----------------------------------------------------------------?
-* npm install babel-core@6.26.0 --save-dev
-* npm install babel-loader@7.1.3 --save-dev
-* npm install babel-preset-es2015@6.24.1 --save-dev
-* build the file with npm: $ npm load build ---------------------------------------- WHERE IS THIS SCRIPT???
-* Load the index.html file from dist/ in your browser
+* Install and initialize (init -y) Node (if it isn't already)
+* Navigate to your root project directory
+* Type "npm init" and run through the package.json file filling in details as needed
+* Type "npm install"
+* Navigate to node_modules/.bin/ and type "jasmine init"
+* Navigate back to the project's root directory
+* To run the tests type "npm test"
+* To run the test server type "npm run start"
+* To build the project type "npm run build" and point your browser at the index.html file in the dist folder
 
 ## Known Bugs and Issues
 

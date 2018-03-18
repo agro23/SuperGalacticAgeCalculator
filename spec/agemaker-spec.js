@@ -28,14 +28,14 @@ describe('AgeMaker', function() {
 
   it("should convert an earth age in years into a planetary age", function() {
     let anAge = new AgeMaker("11/16/1966","female", "mercury");
-    let mercuryAge = anAge.calculatePlanetaryAge("mercury", 100)
-    let venusAge = anAge.calculatePlanetaryAge("venus", 100)
-    let marsAge = anAge.calculatePlanetaryAge("mars", 100)
-    let jupiterAge = anAge.calculatePlanetaryAge("jupiter", 100)
-    expect(mercuryAge).toEqual(24);
-    expect(venusAge).toEqual(62);
-    expect(marsAge).toEqual(188);
-    expect(jupiterAge).toEqual(1186);
+    let mercuryAge = Number(anAge.calculatePlanetaryAge("mercury", 100).toFixed(2));
+    let venusAge = Number(anAge.calculatePlanetaryAge("venus", 100).toFixed(2));
+    let marsAge = Number(anAge.calculatePlanetaryAge("mars", 100).toFixed(2));
+    let jupiterAge = Number(anAge.calculatePlanetaryAge("jupiter", 100).toFixed(2));
+    expect(mercuryAge).toEqual(416.67); // 416.6666666666667 
+    expect(venusAge).toEqual(161.29); // 161.2903225806452
+    expect(marsAge).toEqual(53.19); // 53.19148936170213
+    expect(jupiterAge).toEqual(8.43); // 8.431703204047218
   });
 
   it("should calculate the years left a person has to live", function() {
@@ -46,20 +46,17 @@ describe('AgeMaker', function() {
     expect(years1).toEqual("You have lived 6 years beyond your expiration date!");
   });
 
-  // it("should turn a person's age given in years into seconds", function() {
-  //   let anAge = new AgeMaker("11/16/1966","female", "mercury");
-  //
-  //   let seconds = anAge.calculateSecondsOfAge(ageInYears);
-  //   expect(seconds).toEqual("male");
-  // });
-
   it('should get milliseconds since a date and return seconds', function() {
     let anAge = new AgeMaker("11/16/1966","female", "mercury");
-    console.log("anAge.birthdate = " + anAge.birthdate);
     let theirAgeInMs = anAge.calculateDate(anAge.birthdate);
-    console.log("theirAgeInMs = " + theirAgeInMs);
-    expect(theirAgeInMs).toEqual(1617231600); // test should fail
+    expect(theirAgeInMs).toEqual(1617318000); // test should pass
   });
 
+  it("should turn a person's age given in years into seconds", function() {
+    let anAge = new AgeMaker("11/16/1966","female", "mercury");
+    let ageInYears = anAge.calculateAgeInYears("11/16/1966");
+    let seconds = anAge.calculateSecondsOfAge(ageInYears);
+    expect(seconds).toEqual(1640995200);
+  });
 
 });
