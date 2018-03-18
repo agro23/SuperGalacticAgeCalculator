@@ -76,14 +76,14 @@ We are not required to build a UI for this application. Instead, focus is on tho
   - Return a String with the Planet and the input age in that planet's Years
     * test to see if it calculates an expected result for each planet using an Earth age of 100 for each planet
       - EXPECTED INPUT: mercury, 100
-      - EXPECTED RETURN: 24
+      - EXPECTED RETURN: 416.67
       - EXPECTED INPUT: venus, 100
-      - EXPECTED RETURN: 62
+      - EXPECTED RETURN: 161.29
       - EXPECTED INPUT: mars, 100
-      - EXPECTED RETURN: 188
+      - EXPECTED RETURN: 53.19
       - EXPECTED INPUT: jupiter, 100
-      - EXPECTED RETURN: 1186
-
+      - EXPECTED RETURN: 8.43
+      
 * Create a method to calculate a life expectancy based on a given age in years and the given expectancy of the users demo
   - EXPECTED INPUT: 52, 82
   - EXPECTED OUTPUT: You have 30 years ahead of you!
