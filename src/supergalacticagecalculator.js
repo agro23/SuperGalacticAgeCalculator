@@ -1,1 +1,0 @@
-// SuperGalacticAgeCalculator.js

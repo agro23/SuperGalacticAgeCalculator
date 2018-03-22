@@ -32,7 +32,7 @@ describe('AgeMaker', function() {
     let venusAge = Number(anAge.calculatePlanetaryAge("venus", 100).toFixed(2));
     let marsAge = Number(anAge.calculatePlanetaryAge("mars", 100).toFixed(2));
     let jupiterAge = Number(anAge.calculatePlanetaryAge("jupiter", 100).toFixed(2));
-    expect(mercuryAge).toEqual(416.67); // 416.6666666666667 
+    expect(mercuryAge).toEqual(416.67); // 416.6666666666667
     expect(venusAge).toEqual(161.29); // 161.2903225806452
     expect(marsAge).toEqual(53.19); // 53.19148936170213
     expect(jupiterAge).toEqual(8.43); // 8.431703204047218
@@ -49,7 +49,9 @@ describe('AgeMaker', function() {
   it('should get milliseconds since a date and return seconds', function() {
     let anAge = new AgeMaker("11/16/1966","female", "mercury");
     let theirAgeInMs = anAge.calculateDate(anAge.birthdate);
-    expect(theirAgeInMs).toEqual(1617318000); // test should pass
+    let newDate1 = new Date();
+    let newDate2 = new Date(anAge.birthdate);
+    expect(Math.floor(theirAgeInMs)).toEqual(1617663600); // test should pass
   });
 
   it("should turn a person's age given in years into seconds", function() {
