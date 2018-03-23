@@ -81,4 +81,4 @@ export class AgeMaker {
   }
 
 }
-exports.AgeMakerModule = AgeMaker;
+// exports.AgeMakerModule = AgeMaker;

@@ -1,5 +1,5 @@
 
-let AgeMaker = require('../src/AgeMaker.js').AgeMakerModule;
+import { AgeMaker } from '../src/AgeMaker.js'
 
 describe('AgeMaker', function() {
 
@@ -44,14 +44,6 @@ describe('AgeMaker', function() {
     let years1 = anAge.calculateLifeExpectancyInYears(88, 82);
     expect(years).toEqual("You have 30 years ahead of you!");
     expect(years1).toEqual("You have lived 6 years beyond your expiration date!");
-  });
-
-  it('should get milliseconds since a date and return seconds', function() {
-    let anAge = new AgeMaker("11/16/1966","female", "mercury");
-    let theirAgeInMs = anAge.calculateDate(anAge.birthdate);
-    let newDate1 = new Date();
-    let newDate2 = new Date(anAge.birthdate);
-    expect(Math.floor(theirAgeInMs)).toEqual(1617663600); // test should pass
   });
 
   it("should turn a person's age given in years into seconds", function() {
